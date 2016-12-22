@@ -5,12 +5,30 @@ module.change_code = 1;
 'use strict';
 
 var alexa = require( 'alexa-app' );
-var app = new alexa.app( 'test-skill' );
+var app = new alexa.app( 'cumtd' );
 
+//======================================================
+var req = require('request');
+
+var url = "https://developer.cumtd.com/api/v2.2/json/GetDeparturesByStop?stop_id=IT&key=bddb4d82cb704b708cdf32c72a58db04";
+var options = {
+    url: url
+};
+
+var cb = function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+        var info = JSON.parse(body);
+        console.log(info);
+    }
+};
+
+req(options, cb);
+//======================================================
 
 app.launch( function( request, response ) {
-    response.say( 'Welcome to your test skill' ).reprompt( 'Way to go. You got it to run. Bad ass.' ).shouldEndSession( false );
-} );
+    response.say( 'Welcome to your test skill' )
+            .reprompt( 'Way to go. You got it to run. Bad ass.' ).shouldEndSession( false );
+});
 
 
 app.error = function( exception, request, response ) {

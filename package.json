@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/arahoomam/CUMTD-Skill#readme",
   "dependencies": {
-    "alexa-app": "^2.3.4"
+    "alexa-app": "^2.3.4",
+    "request": "^2.79.0"
   }
 }
