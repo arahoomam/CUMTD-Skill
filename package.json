@@ -1,0 +1,22 @@
+{
+  "name": "cumtdskill",
+  "version": "1.0.0",
+  "description": "Alexa skill for CUMTD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arahoomam/CUMTD-Skill.git"
+  },
+  "author": "Mamoru O'Hara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arahoomam/CUMTD-Skill/issues"
+  },
+  "homepage": "https://github.com/arahoomam/CUMTD-Skill#readme",
+  "dependencies": {
+    "alexa-app": "^2.3.4"
+  }
+}
